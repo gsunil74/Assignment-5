@@ -13,19 +13,23 @@ import java.util.logging.Logger;
  */
 /**
  *
- * @author C0648301
+ * @author C0631942
  */
-public class credentials {
-
-    public static Connection getConnection() {
+public class credentials 
+{
+    public static Connection getConnection() 
+    {
         Connection conn = null;
-        try {
+        try 
+        {
             Class.forName("com.mysql.jdbc.Driver");
             String jdbc = "jdbc:mysql://localhost/assignment3";
             String user = "root";
             String pass = "";
             conn = DriverManager.getConnection(jdbc, user, pass);
-        } catch (ClassNotFoundException | SQLException ex) {
+        } 
+        catch (ClassNotFoundException | SQLException ex) 
+        {
             Logger.getLogger(credentials.class.getName()).log(Level.SEVERE, null, ex);
         }
         return conn;
